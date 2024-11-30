@@ -226,5 +226,77 @@ async function createExamplesPage(){
 
 
 
+// Inside src/tools/create_potree_page.js
+async function createPotreePage() {
+	const htmlContent = `
+	  <html>
+		<head>
+		  <title>Potree Viewer - Login</title>
+		  <link rel="stylesheet" href="potree.css">
+		</head>
+		<body>
+		  <div class="login-container">
+			<h2>Login</h2>
+			<form id="loginForm">
+			  <input type="text" id="username" placeholder="Username" required>
+			  <input type="password" id="password" placeholder="Password" required>
+			  <button type="submit">Login</button>
+			</form>
+			<p id="login-error" style="display:none; color:red;">Invalid credentials. Please try again.</p>
+		  </div>
+		</body>
+	  </html>
+	`;
+	// Write the HTML to the appropriate file
+	fs.writeFileSync('build/potree/login.html', htmlContent);
+  }
 
+  async function createPotreePage() {
+	const htmlContent = `
+	  <html>
+		<head>
+		  <title>Potree Viewer - Login</title>
+		  <link rel="stylesheet" href="potree.css">
+		</head>
+		<body>
+		  <div class="login-container">
+			<h2>Login</h2>
+			<form id="loginForm">
+			  <input type="text" id="username" placeholder="Username" required>
+			  <input type="password" id="password" placeholder="Password" required>
+			  <button type="submit">Login</button>
+			</form>
+			<p id="login-error" style="display:none; color:red;">Invalid credentials. Please try again.</p>
+		  </div>
+		</body>
+	  </html>
+	`;
+	// Write the HTML to the appropriate file
+	fs.writeFileSync('build/potree/signup.html', htmlContent);
+  }
+
+  async function createPotreePage() {
+	const htmlContent = `
+	  <html>
+		<head>
+		  <title>Potree Viewer - Login</title>
+		  <link rel="stylesheet" href="potree.css">
+		</head>
+		<body>
+		  <div class="login-container">
+			<h2>Login</h2>
+			<form id="loginForm">
+			  <input type="text" id="username" placeholder="Username" required>
+			  <input type="password" id="password" placeholder="Password" required>
+			  <button type="submit">Login</button>
+			</form>
+			<p id="login-error" style="display:none; color:red;">Invalid credentials. Please try again.</p>
+		  </div>
+		</body>
+	  </html>
+	`;
+	// Write the HTML to the appropriate file
+	fs.writeFileSync('build/potree/userListing.html', htmlContent);
+  }
+  
 exports.createExamplesPage = createExamplesPage;
