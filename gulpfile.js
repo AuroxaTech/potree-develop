@@ -1,4 +1,3 @@
-
 const path = require('path');
 const gulp = require('gulp');
 const exec = require('child_process').exec;
@@ -22,7 +21,16 @@ let paths = {
 	html: [
 		"src/viewer/potree.css",
 		"src/viewer/sidebar.html",
-		"src/viewer/profile.html"
+		"src/viewer/profile.html",
+		"src/viewer/login.html", 
+		"src/viewer/signup.html", 
+		"src/viewer/dashboard.html",
+		"examples/viewer.html",
+		"src/viewer/uploadForm.html",
+		"src/viewer/userList.html",
+
+		"src/viewer/dashboard-layout.js",
+		"src/viewer/baseApi.js",
 	],
 	resources: [
 		"resources/**/*"
@@ -80,7 +88,9 @@ let shaders = [
 gulp.task('webserver', gulp.series(async function() {
 	server = connect.server({
 		port: 1234,
-		https: false,
+		https: false, 
+		root: 'build/potree',  // Root directory for serving files
+		fallback: 'build/potree/login.html'  // Fallback to login.html as the default page
 	});
 }));
 
